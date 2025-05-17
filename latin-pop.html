@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라틴 팝 음악</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .text-content {
+            color: #1a1a1a;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        .title-text {
+            color: #1a1a1a;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+        .nav-text {
+            color: #1a1a1a !important;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        .list-text {
+            color: #1a1a1a !important;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-yellow-400 via-orange-300 to-red-400 min-h-screen py-8">
+    <nav class="glass fixed w-full top-0 z-50 shadow-lg fade-in">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-gray-900 font-bold text-xl hover:text-gray-800 transition-colors">
+                    글로벌 팝 문화
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link nav-text font-medium">K-POP</a>
+                    <a href="american-pop.html" class="nav-link nav-text font-medium">미국 팝</a>
+                    <a href="british-pop.html" class="nav-link nav-text font-medium">영국 팝</a>
+                    <a href="j-pop.html" class="nav-link nav-text font-medium">J-POP</a>
+                    <a href="latin-pop.html" class="nav-link nav-text font-medium active">라틴 팝</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="text-gray-900 p-2" id="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">K-POP</a>
+                    <a href="american-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">미국 팝</a>
+                    <a href="british-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">영국 팝</a>
+                    <a href="j-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">J-POP</a>
+                    <a href="latin-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">라틴 팝</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="glass rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" 
+                     alt="멕시코 국기" 
+                     class="absolute top-0 right-0 w-24 h-16 object-cover rounded-tr-2xl opacity-80 fade-in">
+                
+                <h1 class="text-4xl font-bold text-center title-text mb-8 pb-4 border-b-2 border-gray-800/30 text-shadow fade-in">
+                    라틴 팝의 세계에 오신 것을 환영합니다!
+                </h1>
+                
+                <section class="mb-12 fade-in delay-1">
+                    <h2 class="text-2xl font-semibold title-text mb-4 text-shadow">라틴 팝이란?</h2>
+                    <p class="text-content leading-relaxed">
+                        라틴 팝은 라틴 아메리카의 전통 음악과 현대 팝의 융합으로, 정열적인 리듬과 멜로디가 특징입니다. 
+                        레게톤, 살사, 메렝게 등 다양한 장르의 영향을 받아 독특한 음악 스타일을 만들어냈습니다.
+                    </p>
+                </section>
+
+                <section class="glass rounded-xl p-6 mb-12 fade-in delay-2">
+                    <h2 class="text-2xl font-semibold title-text mb-6 text-shadow">주요 아티스트</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="glass rounded-lg p-4">
+                            <h3 class="text-xl font-bold title-text mb-2">Bad Bunny</h3>
+                            <p class="text-content">현대 라틴 음악을 대표하는 아티스트로, 독특한 스타일과 혁신적인 음악으로 글로벌 차트를 석권하고 있습니다.</p>
+                        </div>
+
+                        <div class="glass rounded-lg p-4">
+                            <h3 class="text-xl font-bold title-text mb-2">Shakira</h3>
+                            <p class="text-content">라틴 팝의 상징적인 존재로, 독특한 보컬과 댄스 실력으로 수십 년간 전 세계적인 사랑을 받고 있습니다.</p>
+                        </div>
+
+                        <div class="glass rounded-lg p-4">
+                            <h3 class="text-xl font-bold title-text mb-2">Karol G</h3>
+                            <p class="text-content">현대 레게톤과 라틴 팝을 이끄는 여성 아티스트로, 강력한 퍼포먼스와 메시지로 주목받고 있습니다.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass rounded-xl p-6 fade-in delay-4">
+                    <h2 class="text-2xl font-semibold title-text mb-4 text-shadow">라틴 팝의 특징</h2>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            정열적인 리듬과 댄스 비트
+                        </li>
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            스페인어와 영어의 자연스러운 믹스
+                        </li>
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            전통 악기와 현대적 사운드의 조화
+                        </li>
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            다양한 장르의 융합
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 

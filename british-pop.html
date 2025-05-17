@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영국 팝 음악</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .text-content {
+            color: #1a1a1a;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        .title-text {
+            color: #1a1a1a;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+        .nav-text {
+            color: #1a1a1a !important;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        .list-text {
+            color: #1a1a1a !important;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-500 via-white to-blue-500 min-h-screen py-8">
+    <nav class="glass fixed w-full top-0 z-50 shadow-lg fade-in">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-gray-900 font-bold text-xl hover:text-gray-800 transition-colors">
+                    글로벌 팝 문화
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link nav-text font-medium">K-POP</a>
+                    <a href="american-pop.html" class="nav-link nav-text font-medium">미국 팝</a>
+                    <a href="british-pop.html" class="nav-link nav-text font-medium active">영국 팝</a>
+                    <a href="j-pop.html" class="nav-link nav-text font-medium">J-POP</a>
+                    <a href="latin-pop.html" class="nav-link nav-text font-medium">라틴 팝</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="text-gray-900 p-2" id="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">K-POP</a>
+                    <a href="american-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">미국 팝</a>
+                    <a href="british-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">영국 팝</a>
+                    <a href="j-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">J-POP</a>
+                    <a href="latin-pop.html" class="block nav-text font-medium p-2 rounded hover:bg-white/10">라틴 팝</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="glass rounded-2xl shadow-2xl p-8 relative overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" 
+                     alt="영국 국기" 
+                     class="absolute top-0 right-0 w-24 h-16 object-cover rounded-tr-2xl opacity-80 fade-in">
+                
+                <h1 class="text-4xl font-bold text-center title-text mb-8 pb-4 border-b-2 border-gray-800/30 text-shadow fade-in">
+                    영국 팝 음악의 세계에 오신 것을 환영합니다!
+                </h1>
+                
+                <section class="mb-12 fade-in delay-1">
+                    <h2 class="text-2xl font-semibold title-text mb-4 text-shadow">영국 팝이란?</h2>
+                    <p class="text-content leading-relaxed">
+                        영국 팝은 비틀즈로부터 시작된 풍부한 음악적 유산을 바탕으로, 독특한 정체성과 혁신적인 사운드를 선보이며 
+                        글로벌 음악 시장에서 중요한 위치를 차지하고 있습니다.
+                    </p>
+                </section>
+
+                <section class="glass rounded-xl p-6 mb-12 fade-in delay-2">
+                    <h2 class="text-2xl font-semibold title-text mb-6 text-shadow">주요 아티스트</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="glass rounded-lg p-4">
+                            <h3 class="text-xl font-bold title-text mb-2">Ed Sheeran</h3>
+                            <p class="text-content">현대 영국 팝을 대표하는 싱어송라이터로, 감성적인 가사와 멜로디로 전 세계적인 사랑을 받고 있습니다.</p>
+                        </div>
+
+                        <div class="glass rounded-lg p-4">
+                            <h3 class="text-xl font-bold title-text mb-2">Adele</h3>
+                            <p class="text-content">파워풀한 보컬과 감동적인 발라드로 현대 팝 음악의 새로운 기준을 제시하고 있습니다.</p>
+                        </div>
+
+                        <div class="glass rounded-lg p-4">
+                            <h3 class="text-xl font-bold title-text mb-2">Dua Lipa</h3>
+                            <p class="text-content">현대적인 디스코 팝을 부활시키며 새로운 세대의 팝 아이콘으로 자리매김했습니다.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass rounded-xl p-6 fade-in delay-4">
+                    <h2 class="text-2xl font-semibold title-text mb-4 text-shadow">영국 팝의 특징</h2>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            독창적인 음악 스타일
+                        </li>
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            풍부한 음악적 유산
+                        </li>
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            실험적인 사운드
+                        </li>
+                        <li class="flex items-center list-text font-medium">
+                            <span class="w-2 h-2 bg-gray-800 rounded-full mr-3"></span>
+                            강력한 라이브 문화
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
